@@ -1,0 +1,13 @@
+{
+  "name": "02-nodejs",
+  "version": "1.0.0",
+  "description": "TP02-Node JS",
+  "test command":"test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "git repository": "https://github.com/Paymer/formation-frontend.git",
+  "author": "Paymer",
+  "license": "ISC"
+}
