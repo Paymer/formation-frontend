@@ -1,13 +1,9 @@
-
-const readline = require('readline');
-
 var ser = require("./service");
 
-const menu = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-    
-})
+
+const readline = require('readline'),
+menu = readline.createInterface(process.stdin, process.stdout),
+prefix ='Hi!';
 
 
 function afficherMenu(){
@@ -20,12 +16,7 @@ console.log('5.Finir');
 }
 
 function demarrage(){
-
-
 afficherMenu();
-
-
-
 menu.question('Choisise? ', function(answer) {
     //it outputs the answer
     console.log('tu as ecrit:',answer);
@@ -53,14 +44,17 @@ if (answer.match('1')){
             console.log(session);
              menu.close();})
 
-}else{console.log('Ended');  menu.close(); a=99;}
+}else{console.log('Ended'); menu.close();}
 
- 
+// menu.setPrompt(prefix, prefix.length);
+// menu.prompt();
 });
 
-
-
 }
+
+
+
+
 
 
 function toString(element, index, array){
