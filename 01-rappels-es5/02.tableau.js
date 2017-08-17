@@ -12,7 +12,7 @@ console.log ('lettreADansToutesLesVilles ==', lettreADansToutesLesVilles);
 
 //SOME
 var auMoinsUneVilleAvecUnTiret = villes.some(function(element){
-    return element.indexOf('-') >= 0;
+    return (element.indexOf('-') >= 0) && (element.indexOf('') >= 0);
 })
 
 console.log ('auMoinsUneVilleAvecUnTiret ==', auMoinsUneVilleAvecUnTiret);
@@ -36,3 +36,4 @@ var villesMajusculeSeTerminantParS = villesTerminantParS.map(function (element){
 console.log ('villesMajusculeSeTerminantParS ==', villesMajusculeSeTerminantParS);
 
 
+    
