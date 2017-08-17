@@ -6,7 +6,9 @@ var ser = require("./service");
 const menu = readline.createInterface({
     input: process.stdin,
     output: process.stdout
+    
 })
+
 
 function afficherMenu(){
 console.log('*** Application Conférence ***');
@@ -59,6 +61,7 @@ if (answer.match('1')){
 
 
 }
+
 
 function toString(element, index, array){
     return (element.firstname+' '+element.lastname);
