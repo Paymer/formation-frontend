@@ -1,6 +1,7 @@
 
 var path = require('path');
 
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
@@ -13,6 +14,7 @@ path: path.resolve(__dirname, 'dist'),
 filename: "bundle.js"
 },
 plugins: [
-new UglifyJSPlugin() 
+new UglifyJSPlugin(),
+new HtmlWebpackPlugin() 
 ]
 }
