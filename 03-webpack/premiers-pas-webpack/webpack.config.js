@@ -1,6 +1,7 @@
 
 var path = require('path');
 
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 // définition des points d'entrée
@@ -10,5 +11,8 @@ output: {
 
 path: path.resolve(__dirname, 'dist'),
 filename: "bundle.js"
-}
+},
+plugins: [
+new UglifyJSPlugin() 
+]
 }
