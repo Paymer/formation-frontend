@@ -3,12 +3,12 @@
 <section id="tp03">
 <h1>TP 03 - Carrousel d'images</h1>
 
-<div ng-controller="CarrouselCtrl">
-    <img src = {{images[currentId].url}}>
+<div ng-controller="CarrouselCtrl as ctrl">
+    <img src = {{ctrl.images[ctrl.currentId].url}}>
 
  
-    <button ng-click= "next()">Next</button>
-    <button ng-click= "previous()">Prev</button>
+    <button ng-click= "ctrl.next()">Next</button>
+    <button ng-click= "ctrl.previous()">Prev</button>
    
 
 </div>
