@@ -1,0 +1,4 @@
+
+#form3 .ng-dirty { border:1px solid green; color: green; font-weight: bold; }
+#form3 .ng-dirty.ng-invalid { border:1px solid red; background-color:red; color: white;}
+#form3 .ng-pristine {background-color:red; }

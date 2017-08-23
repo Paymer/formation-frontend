@@ -1,0 +1,47 @@
+
+<section id="tp04" ng-controller="FormController as ctrl">
+<h1>TP 04 - Formulaire</h1>
+
+<!-- Test 1 : model binding -->
+<!-- ajouter l'affichage des données saisies via un modèle -->
+<form name="form1">
+Name: <input ng-model="user.name" type="text"/><br>
+E-mail: <input ng-model="user.email" type="email"/><br>
+
+</form>
+
+<p> {"name": "{{user.name}}", "email": "{{user.email}}}"</p>
+
+
+
+
+<!-- Test 2 : 2 états-->
+<!-- TODO :
+- ajouter un bouton de sauvegarde et un bouton de reset
+- ajouter l'affichage de l'état édition et de l'état tampon
+-->
+<form name="form2">
+Name: <input ng-model="ctrl.currentUser.name" type="text"/><br>
+E-mail: <input ng-model="ctrl.currentUser.email" type="email"/><br>
+<button ng-click="ctrl.save()">SAVE</button>
+<button ng-click="ctrl.reset()">RESET</button>
+</form>
+
+<p> Current: {"name": "{{ctrl.currentUser.name}}", "email": "{{ctrl.currentUser.email}}}"</p>
+<p> Saved: {"name": "{{ctrl.copyUser.name}}", "email": "{{ctrl.copyUser.email}}}"</p>
+
+
+
+<!-- Test 3 : validation -->
+<!-- TODO : ajouter une validation Angular avec affichage des erreurs et
+utilisation des classes CSS -->
+<form id="form3" name="form3">
+Name: <input ng-model="name" type="text" required/><br>
+E-mail: <input ng-model="email" type="email" required/><br>
+</form>
+
+
+
+}
+
+</section>

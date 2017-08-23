@@ -17,8 +17,6 @@ this.images = [
 
 // ajouter une variable 'currentId' au scope indiquant l'index de l'image courante
 this.currentId=0;
-
-
 this.$interval(() => this.next(), 4000);
 }
 
