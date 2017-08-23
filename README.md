@@ -7,3 +7,5 @@ JS practics:
 - TP05: Angular JS
     - tp01: expressions
     - tp02: Vues et Expressions
+    - tp03: Carousel d'images
+        toDO: transformer la fonction CarrouselCtrl en classe ES2015
