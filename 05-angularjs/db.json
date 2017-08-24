@@ -26,6 +26,12 @@
       "id": "tokyo",
       "name": "Tokyo",
       "imageUrl": "img/tokyo.jpg"
+    },
+    {
+      "id": "barna",
+      "name": "barna",
+      "price": "15061",
+      "imageUrl": "http://images.photowall.com/products/49705/barcelona-skyline.jpg?h=650&q=90&"
     }
   ],
   "trips-details": [

@@ -17,7 +17,7 @@ this.images = [
 
 // ajouter une variable 'currentId' au scope indiquant l'index de l'image courante
 this.currentId=0;
-this.$interval(() => this.next(), 4000);
+this.$interval(() => this.next(), 3000);
 }
 
 
@@ -28,15 +28,13 @@ if (this.currentId>0){
 }
 else if (this.currentId == 0){
     this.currentId = 4;
-}}
+}
+//this.currentId == 0 ? this.currentId = this.images.length - 1 : this.currentId--;
+}
 
 // ajouter un fonction next()
 next (){
-if (this.currentId<4){
-   this.currentId++;
-}
-else if (this.currentId == 4){
-    this.currentId = 0;
-}   }
+    this.currentId == this.images.length - 1 ? this.currentId = 0 : this.currentId++;
+ }
 
 }
