@@ -1,0 +1,19 @@
+<section id="tp05">
+<h1>TP 05 - Communication avec $http</h1>
+
+
+
+
+<!-- TODO -->
+<div ng-controller="TripListCtrl as ctrl">
+
+<div ng-repeat="item in ctrl.data">
+ 
+    <input id="City" name="City" ng-model="name" type="text" placeholder={{item.name}} >
+    <input id="Price" name="Price" ng-model="price" type="text" placeholder={{item.price}}>
+    <button ng-click="ctrl.modify(item.id, name, price)">Save</button><br></br>
+    <img src = {{item.imageUrl}}>
+    <p> {{name}} {{price}}</p>
+</div>
+
+</section>

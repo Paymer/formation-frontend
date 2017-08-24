@@ -9,6 +9,7 @@ JS practics:
     - tp02: Vues et Expressions
     - tp03: Carousel d'images
     - tp04: forms
+    - tp05: Comunication Server
 
    
         
