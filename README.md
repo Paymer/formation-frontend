@@ -9,8 +9,10 @@ JS practics:
     - tp02: Vues et Expressions
     - tp03: Carousel d'images
     - tp04: forms
-    - tp05: Comunication Server -activation/deactivation of the buttons
+    - tp05: Comunication Server
     - tp06: Communication REST
+    - tp07: Services
+        - Finish Service TripsService (service)
 
    
         //npm start
