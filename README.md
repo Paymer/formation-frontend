@@ -17,7 +17,7 @@ JS practics:
 ------------------------------------------------------------------
 
 
-    *How to add bootstrap:
+How to add bootstrap:
 
     - Installer Bootstrap
         npm i bootstrap --save
