@@ -9,7 +9,8 @@ JS practics:
     - tp02: Vues et Expressions
     - tp03: Carousel d'images
     - tp04: forms
-    - tp05: Comunication Server
+    - tp05: Comunication Server -activation/deactivation of the buttons
+    - tp06: Communication REST
 
    
         //npm start

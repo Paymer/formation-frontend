@@ -1,0 +1,30 @@
+
+
+<section id="tp06">
+<h1>TP 06 - Communication avec $resource</h1>
+<!-- TODO -->
+
+
+<div ng-controller="TripListDetailsCtrl as ctrl">
+<div ng-repeat="item in ctrl.tripList">
+    <h3> - {{item.name}} - {{item.price}} € </h3>
+    <img ng-click="des = !des" height="300" width="400" ng-src = "{{item.imageUrl}}">
+
+    <div ng-show= "des">
+        
+       <br></br>
+        <textarea id="description" name="description" ng-model="item.description" type="text" style= "width:400px; height:200px;" ></textarea>
+        <br></br>
+        <button ng-click="des=false; ctrl.update(item)">Update</button>
+    </div>
+  
+
+    <p>-------------------------------------------------------------------------</p>
+  
+  
+
+</div>
+
+
+</div>
+</section>
