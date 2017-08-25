@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
+var webpack = require("webpack");
 const output = 'public';
 
 module.exports = {
@@ -39,7 +39,9 @@ module.exports = {
             { test: /\.(css)$/, use: ['style-loader', 'css-loader']},
             { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, use: 'file-loader?name=fonts/[name].[ext]'},
             { test: /\.html$/, exclude: [/node_modules/], use: 'raw-loader'},
+            
 
-        ]
-    }
-};
+        ]},
+            plugins: [
+            new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery", "window.jQuery": "jquery", Popper:'popper.js' }) ]};
+   

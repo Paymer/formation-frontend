@@ -1,0 +1,22 @@
+
+<section id="tp08" ng-controller="RaceCtrl as ctrl">
+<h1>TP 08 - Modules</h1>
+<h3>Pariez</h3>
+
+<!-- Buttons -->
+<div class="form-group" >
+  
+    <button ng-repeat="item in ctrl.list" ng-click='ctrl.updateName(item.name)'  id="{{item.name}}" name="{{item.name}}" class="btn btn-{{item.shirt}}">{{item.name}}</button>
+    <p ng-show='ctrl.bool'> vous pariez sur {{ctrl.name}}<p>
+</div>
+
+<h3>La Course</h3>
+
+<button  id="start" ng-click="ctrl.lancerCourse()" name="start" class="btn btn-primary">Lancer la course</button>
+<br></br>
+
+  <div class="progress" ng-repeat='item in ctrl.list' >
+    <div  class="progress-bar bg-{{item.shirt}}" role="progressbar" style="width:25%" aria-valuenow="{{item.progress}}" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+</section>

@@ -1,6 +1,8 @@
 
 import angular from 'angular'
 import ngResource from 'angular-resource'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
 console.log('Bonjour App');
 
 
@@ -14,9 +16,11 @@ import apiUrls from './tp07/apiUrls.service'
 import CommentsService from './tp07/comments.service'
 import StepsService from './tp07/steps.service'
 import TripCommentsCtrl from './tp07/tripsComments.controller'
+import RaceModule from './tp08/race/race.module'
+import SimulatorModule from './tp08/simulator/simulator.module'
+ 
 
-
-angular.module('tripApp', ['ngResource'])
+angular.module('tripApp', ['ngResource', 'RaceModule', 'SimulatorModule'])
 //Controllers
 .controller(CarrouselCtrl.name, CarrouselCtrl) 
 .controller('FormController', FormController)
@@ -40,10 +44,12 @@ import tplTp04 from './tp04/forms.html'
 import tplTp05 from './tp05/tripList.html'
 import tplTp06 from './tp06/tripListDetails.html'
 import tplTp07 from './tp07/tripsComments.html'
+import tplTp08 from './tp08/race/race.html'
 
 // insertion du code HTML dans le corps de la page principale
 
-document.querySelector('body').innerHTML = [tplTp01].join('<hr>') 
+document.querySelector('body').innerHTML = [tplTp08].join('<hr>')
+    + [tplTp01].join('<hr>') 
     + ([tplTp02].join('<hr>')) 
     + [tplTp03].join('<hr>')
     + [tplTp04].join('<hr>')
