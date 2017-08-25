@@ -11,14 +11,24 @@ import TripListDetailsCtrl from './tp06/tripListDetails.controller'
 import TripsCommentsCtrl from './tp07/tripsComments.controller'
 import TripsService from './tp07/trips.Service'
 import apiUrls from './tp07/apiUrls.service'
+import CommentsService from './tp07/comments.service'
+import StepsService from './tp07/steps.service'
+import TripCommentsCtrl from './tp07/tripsComments.controller'
+
+
 angular.module('tripApp', ['ngResource'])
+//Controllers
 .controller(CarrouselCtrl.name, CarrouselCtrl) 
 .controller('FormController', FormController)
 .controller('TripListCtrl', TripListCtrl)
 .controller(TripListDetailsCtrl.name, TripListDetailsCtrl)
-.controller(tripsCommentsCtrl.name, tripsCommentsCtrl)
+.controller(TripCommentsCtrl.name, TripCommentsCtrl)
+//Services
 .constant('apiUrls', apiUrls)
-.service('TripsService', TripsService);
+.service('TripsService', TripsService)
+.factory('CommentsService', (apiUrls, $http)=> {return new CommentsService(apiUrls, $http)})
+.service('StepsService', StepsService);
+
 
 
 

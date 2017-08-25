@@ -12,7 +12,7 @@ JS practics:
     - tp05: Comunication Server
     - tp06: Communication REST
     - tp07: Services
-        - Finish Service TripsService (service)
+       
 
    
         //npm start

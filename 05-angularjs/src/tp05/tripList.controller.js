@@ -6,7 +6,7 @@ constructor($http){
     this.$http = $http;
 
     $http({method:'GET', url:'http://localhost:3000/trips'})
-.then((response) => {
+        .then((response) => {
     this.data = response.data
 })
 }

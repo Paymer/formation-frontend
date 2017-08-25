@@ -1,4 +1,35 @@
 <section id="tp07">
 <h1>TP 07 - Services</h1>
 <!-- TODO -->
+
+
+ <div ng-controller="TripCommentsCtrl as ctrl">
+
+    <!-- trip selector -->
+    <select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.choix" ng-change="ctrl.jaiChange()"> 
+            <option value="{{item.id}}" ng-repeat="item in ctrl.trips">{{item.name}}</option>
+    </select>
+    <br></br>
+
+    <!-- images -->
+    <img ng-repeat="item in ctrl.steps" height="300" width="400" ng-src = '{{item.imageUrl}}'>
+    <!-- comments -->
+    <ul>
+      <li ng-repeat="item in ctrl.comments">{{item.id}} : {{item.text}} </li>
+    </ul>
+
+     <!-- new comment -->
+    <textarea ng-model="comment" id="comment" name="Comment" type="text" style= "width:400px; height:100px;" ></textarea>
+    
+    <!-- Add Comment -->
+    <button ng-click="ctrl.comment(comment)">Comment</button>
+
+
+
+
+
+
+
+  </div>
+
 </section>
