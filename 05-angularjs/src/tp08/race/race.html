@@ -16,7 +16,8 @@
 <br></br>
 
   <div class="progress" ng-repeat='item in ctrl.list' >
-    <div  class="progress-bar bg-{{item.shirt}}" role="progressbar" style="width:25%" aria-valuenow="{{item.progress}}" aria-valuemin="0" aria-valuemax="100"></div>
+    <div  class="progress-bar progress-bar-{{item.shirt}}" role="progressbar" style="width:{{item.progress}}%" aria-valuenow={{item.progress}} aria-valuemin="{{item.progress}}" aria-valuemax="100">{{item.name}}: {{item.progress}}%</div>
   </div>
 
+ 
 </section>

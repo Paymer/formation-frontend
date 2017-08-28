@@ -12,7 +12,7 @@ JS practics:
     - tp05: Comunication Server
     - tp06: Communication REST
     - tp07: Services
-    - tp08: Modularisation: To finish the colors and the progress of the bars
+    - tp08: Modularisation
        
 
    

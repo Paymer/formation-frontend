@@ -48,11 +48,5 @@ import tplTp08 from './tp08/race/race.html'
 
 // insertion du code HTML dans le corps de la page principale
 
-document.querySelector('body').innerHTML = [tplTp08].join('<hr>')
-    + [tplTp01].join('<hr>') 
-    + ([tplTp02].join('<hr>')) 
-    + [tplTp03].join('<hr>')
-    + [tplTp04].join('<hr>')
-    + [tplTp05].join('<hr>')
-    + [tplTp06].join('<hr>')
-    + [tplTp07].join('<hr>')
+document.querySelector('body').innerHTML = [tplTp01, tplTp02, tplTp03, tplTp04, tplTp05, tplTp06, tplTp07, tplTp08].join('<hr>')
+ 
