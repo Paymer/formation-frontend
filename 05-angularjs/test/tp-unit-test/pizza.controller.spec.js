@@ -1,15 +1,39 @@
 import PizzaCtrl from "../../src/tp-unit-tests/pizza.controller";
 import PizzaService from "../../src/tp-unit-tests/pizza.service";
 
-it(`A l'initialisation le contrôleur PizzaCtrl possède une liste de pizzas `, () => {
+describe('Suite de tests pour un contrôleur', () => {
+// code qui va s'exécuter avant chaque test
+beforeEach(() => {
+angular.mock.module('tripApp')
+})
+// cas de test
+// angular.mock.inject permet d'injecter des dépendances
+// les services sont directement injectables
+it(`A l'initialisation le contrôleur PizzaCtrl possède une liste de pizzas `,
+angular.mock.inject(($controller) => {
+// injection de dépendance
+// l'instance est récupérée à partir de son nom
+//const pizzaCtrl = $controller('PizzaCtrl')
+// modification du service PizzaService pour qu'il retourne des données différentes
+const pizzaCtrl = $controller('PizzaCtrl', {
+PizzaService : {
+findAll : () => [ { name: 'Pépéroni', price: 12}, { name: 'Oriental',
+price: 15}, { name: 'Saumon', price: 20}]
+}
+})
 
-const pizzaServ = new PizzaService() 
-const pizzaCtrl = new PizzaCtrl(pizzaServ) 
+/**const pizzaCtrl = $controller('PizzaCtrl',
+//pas de modification des dépendances 
+{},
+//propriétés du contrôleur à l'initialisation 
+{ nomPizzeria : 'La Super Pizzéria'})
 
-// vérifier que le contrôleur possède une propriété _pizzas_ valorisée
-expect(pizzaCtrl.pizzas).toBeDefined();
-// vérifier que cette propriété _pizzas_ est un tableau de 2 élements
-expect(pizzaCtrl.pizzas.length).toBe(2);
-// vérifier qu'une pizza avec le nom 'Pépéroni' est bien présente
-expect(pizzaCtrl.pizzas.find(p => p.name === 'Pépéroni')).toBeDefined;
+expect(pizzaCtrl.nomPizzeria).toEqual('La Super Pizzéria')
+expect(pizzaCtrl.pizzas.length).toBe(2)
+})) */
+
+//expect(pizzaCtrl.pizzas.length).toBe(2)
+expect(pizzaCtrl.pizzas.length).toBe(3)
+expect(pizzaCtrl.pizzas.find(p => p.name === 'Pépéroni')).toBeDefined()
+}))
 })

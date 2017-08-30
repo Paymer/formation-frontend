@@ -19,8 +19,11 @@ import TripCommentsCtrl from './tp07/tripsComments.controller'
 import RaceModule from './tp08/race/race.module'
 import SimulatorModule from './tp08/simulator/simulator.module'
  
- import PizzaCtrl from "./tp-unit-tests/pizza.controller";
+import PizzaCtrl from "./tp-unit-tests/pizza.controller";
 import PizzaService from "./tp-unit-tests/pizza.service";
+import pizCmpDirective from "./tp-unit-tests/pizza.component";
+import PizzaRemoteService from "./tp-unit-tests/pizza.remote.service";
+
 
 angular.module('tripApp', ['ngResource', 'RaceModule', 'SimulatorModule'])
 //Controllers
@@ -29,13 +32,16 @@ angular.module('tripApp', ['ngResource', 'RaceModule', 'SimulatorModule'])
 .controller('TripListCtrl', TripListCtrl)
 .controller(TripListDetailsCtrl.name, TripListDetailsCtrl)
 .controller(TripCommentsCtrl.name, TripCommentsCtrl)
+.controller(PizzaCtrl.name, PizzaCtrl)
 //Services
 .constant('apiUrls', apiUrls)
 .service('TripsService', TripsService)
 .factory('CommentsService', (apiUrls, $http)=> {return new CommentsService(apiUrls, $http)})
 .service('StepsService', StepsService)
-.controller(PizzaCtrl.name, PizzaCtrl)
-.service(PizzaService.name, PizzaService);
+.service(PizzaService.name, PizzaService)
+.service(PizzaRemoteService.name, PizzaRemoteService)
+//Component
+.component('pizCmp', pizCmpDirective);
 
 
 
@@ -49,6 +55,7 @@ import tplTp05 from './tp05/tripList.html'
 import tplTp06 from './tp06/tripListDetails.html'
 import tplTp07 from './tp07/tripsComments.html'
 import tplTp08 from './tp08/race/race.html'
+import pizzaTmpl from "./tp-unit-tests/pizza.html";
 
 // insertion du code HTML dans le corps de la page principale
 
