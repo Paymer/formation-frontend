@@ -13,10 +13,14 @@ JS practics:
     - tp06: Communication REST
     - tp07: Services
     - tp08: Modularisation
+    - tp: unit-tests with jasmine and Karma and ng Mock
        
 
    
         //npm start
+
+Instalation for tests:
+npm i karma karma-jasmine karma-chrome-launcher karma-phantomjs-launcher jasmine-core karma-webpack --save-dev
 
 ------------------------------------------------------------------
 

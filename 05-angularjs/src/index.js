@@ -19,6 +19,8 @@ import TripCommentsCtrl from './tp07/tripsComments.controller'
 import RaceModule from './tp08/race/race.module'
 import SimulatorModule from './tp08/simulator/simulator.module'
  
+ import PizzaCtrl from "./tp-unit-tests/pizza.controller";
+import PizzaService from "./tp-unit-tests/pizza.service";
 
 angular.module('tripApp', ['ngResource', 'RaceModule', 'SimulatorModule'])
 //Controllers
@@ -31,7 +33,9 @@ angular.module('tripApp', ['ngResource', 'RaceModule', 'SimulatorModule'])
 .constant('apiUrls', apiUrls)
 .service('TripsService', TripsService)
 .factory('CommentsService', (apiUrls, $http)=> {return new CommentsService(apiUrls, $http)})
-.service('StepsService', StepsService);
+.service('StepsService', StepsService)
+.controller(PizzaCtrl.name, PizzaCtrl)
+.service(PizzaService.name, PizzaService);
 
 
 
